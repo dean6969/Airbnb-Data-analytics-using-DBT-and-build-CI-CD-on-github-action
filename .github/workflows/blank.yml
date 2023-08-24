@@ -36,4 +36,4 @@ jobs:
         SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
         SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
       run: |
-        dbt run --profiles-dir $GITHUB_WORKSPACE
+        dbt run --profiles-dir --profiles-dir $GITHUB_WORKSPACE
