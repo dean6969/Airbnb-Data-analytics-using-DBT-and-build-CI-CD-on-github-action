@@ -15,7 +15,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@main
 
     - name: Set up Python
       uses: actions/setup-python@v2
@@ -25,6 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install dbt-snowflake==1.5.0
+        dbt deps
 
     - name: Run DBT
       env:
@@ -36,4 +37,4 @@ jobs:
         SNOWFLAKE_WAREHOUSE: ${{ secrets.SNOWFLAKE_WAREHOUSE }}
         SNOWFLAKE_SCHEMA: ${{ secrets.SNOWFLAKE_SCHEMA }}
       run: |
-        dbt run --profiles-dir --profiles-dir $GITHUB_WORKSPACE
+        dbt run 
