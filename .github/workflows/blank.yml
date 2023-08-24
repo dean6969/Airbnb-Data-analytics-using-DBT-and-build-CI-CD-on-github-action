@@ -20,11 +20,11 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.11'
 
     - name: Install dependencies
       run: |
-        pip install dbt
+        pip install dbt-snowflake==1.5.0
 
     - name: Run DBT
       env:
