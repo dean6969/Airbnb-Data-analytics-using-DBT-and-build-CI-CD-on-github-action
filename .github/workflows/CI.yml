@@ -56,3 +56,11 @@ jobs:
     - name: Run DBT Test
       run: |
         dbt test --profiles-dir ./
+
+    - name: Run DBT Document generator
+      run: |
+        dbt docs generate --profiles-dir ./
+
+    - name: Run DBT Document Serve
+      run: |
+        dbt docs serve --profiles-dir ./
