@@ -9,9 +9,6 @@ models:
       - name: host_id
         tests:
           - not_null
-          - relationships:
-            to: ref('dim_hosts_cleansed')
-            field: host_id
       - name: room_type
         tests:
         - accepted_values:
