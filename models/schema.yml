@@ -47,7 +47,7 @@ models:
     - name: reviewer_name
       tests:
       - not_null
-      - name: review_sentiment
-        tests:
-          - accepted_values:
-              values: ['positive', 'neutral', 'negative']
+    - name: review_sentiment
+      tests:
+        - accepted_values:
+            values: ['positive', 'neutral', 'negative']
