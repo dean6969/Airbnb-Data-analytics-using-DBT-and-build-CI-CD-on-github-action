@@ -42,6 +42,8 @@ models:
 
   - name: fct_reviews
     columns:     
+    - name: listing_id
+      tests: []
     - name: reviewer_name
       tests:
       - not_null
