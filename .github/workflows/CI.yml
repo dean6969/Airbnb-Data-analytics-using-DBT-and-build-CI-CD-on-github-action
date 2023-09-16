@@ -41,9 +41,9 @@ jobs:
     - name: Debug dbt connection
       run: dbt debug --profiles-dir $GITHUB_WORKSPACE
 
-    # - name: Run DBT Seed  # This is the new step
-    #   run: |
-    #     dbt seed --profiles-dir ./
+    - name: Run DBT Seed  # This is the new step
+      run: |
+        dbt seed --profiles-dir ./
 
     - name: Run DBT
       run: |
